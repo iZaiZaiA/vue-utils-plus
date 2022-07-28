@@ -1,8 +1,8 @@
 {
-    "name": "vue-utils",
+    "name": "vueutils",
     "version": "0.0.1",
     "private": true,
-    "description": "vueUtils",
+    "description": "vueutils",
     "scripts": {
         "build": "vite build",
         "link": "yarn link"
@@ -30,10 +30,10 @@
     "license": "MIT",
     "author": "iZaiZaiA<https://github.com/iZaiZaiA>",
     "copyright": "Copyright © 2022 iZaiZaiA And vueUtils",
-    "homepage": "https://github.com/iZaiZaiA/vueUtils",
+    "homepage": "https://github.com/iZaiZaiA/vueutils",
     "repository": {
         "type": "git",
-        "url": "https://github.com/iZaiZaiA/vueUtils"
+        "url": "https://github.com/iZaiZaiA/vueutils"
     },
     "keywords": [
         "vueUtils",
