@@ -1,2 +1,2 @@
-# vueUtils
-vueUtils
+#vue-utils-plus
+test
