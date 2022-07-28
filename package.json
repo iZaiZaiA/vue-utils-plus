@@ -1,0 +1,43 @@
+{
+    "name": "vue-utils",
+    "version": "0.0.1",
+    "private": true,
+    "description": "vueUtils",
+    "scripts": {
+        "build": "vite build",
+        "link": "yarn link"
+    },
+    "files": [
+        "dist",
+        "style",
+        "LICENSE",
+        "README.md"
+    ],
+    "main": "./dist/index.js",
+    "module": "./dist/index.esm.js",
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^3.0.1",
+        "@vue/compiler-sfc": "^3.2.37",
+        "axios": "^0.27.2",
+        "crypto-js": "^4.1.1",
+        "js-base64": "^3.7.2",
+        "js-cookie": "^3.0.1",
+        "js-md5": "^0.7.3",
+        "vue": "^3.2.37",
+        "sass": "^1.54.0",
+        "vite": "^3.0.3"
+    },
+    "license": "MIT",
+    "author": "iZaiZaiA<https://github.com/iZaiZaiA>",
+    "copyright": "Copyright © 2022 iZaiZaiA And vueUtils",
+    "homepage": "https://github.com/iZaiZaiA/vueUtils",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/iZaiZaiA/vueUtils"
+    },
+    "keywords": [
+        "vueUtils",
+        "component library",
+        "vue"
+    ]
+}
