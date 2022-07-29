@@ -8,7 +8,6 @@
     },
     "files": [
         "dist",
-        "style",
         "LICENSE",
         "README.md"
     ],
@@ -35,7 +34,7 @@
         "url": "https://github.com/iZaiZaiA/vue-utils-plus"
     },
     "keywords": [
-        "vueUtils",
+        "vue-utils-plus",
         "component library",
         "vue"
     ]

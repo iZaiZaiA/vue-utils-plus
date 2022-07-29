@@ -4,7 +4,7 @@
 export const isType = () => {
     const toString = Object.prototype.toString;
 
-    //判断值是否未某个类型
+    //判断值是否为某个类型
     const is = (val, type) => {
         return toString.call(val) === `[object ${type}]`;
     }
@@ -69,7 +69,7 @@ export const isType = () => {
     }
 
     //是否客户端
-    const isClient = (val) => {
+    const isClient = () => {
         return typeof window !== 'undefined';
     }
 
@@ -84,7 +84,7 @@ export const isType = () => {
 
     // 是否为图片节点
     const isImageDom = (val) => {
-        return val && ['IMAGE', 'IMG'].includes(val.tagName);
+        return val && ['IMAGE', 'IMG','image', 'img'].includes(val.tagName);
     }
 
     const isNull = (val) => {

@@ -48,7 +48,7 @@ export const isValidate = () => {
         return verifyCardNum(val)
     }
 
-    //判断姓名是否正确
+    //判断名称是否正确
     const isName = (val) => {
         let regName = /^[\u4e00-\u9fa5]{2,4}$/;
         if (!regName.test(val)) return false;

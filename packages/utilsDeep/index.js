@@ -29,7 +29,7 @@ export const utilsDeep = () => {
         return obj;
     }
 
-    //对象深拷贝
+    //对象浅拷贝
     const deepJson = (data) => {
         return JSON.parse(JSON.stringify(data));
     }

@@ -1,0 +1,46 @@
+# 这是什么？
+
+基于vue3的 非常简单的常用方法函数库，我自用的，如果你是大佬，可以关闭了。
+
+::: warning
+    Vue-Utils-Plus 还在 `beta` 阶段。
+:::
+
+## 不是 TypeScript
+
+因为我不会 TypeScript，也不想学 TS，所以，它不是用 TS 开发的。JavaScript 万岁！！
+
+## 不支持 Vue2
+
+我也不知道支不支持Vue2，但有些方法函数，肯定不支持，比如，跟渲染相关的，因为采用的是Vue3的写法
+
+### 没有 CDN
+
+没有CDN，免费的，懒得弄，收费的，没钱弄，将就玩一下就行了，咱又不是知名大库
+
+### 没有 性能
+
+性能？什么性能？按需加载？什么按需加载？内存溢出？什么内存溢出？我不懂~~
+
+### 别讲什么什么现成库
+
+那些现成的库，非常好，但并不影响，我要自己做一个，我自己的常用方法函数库。
+
+### 道歉 三连
+
+<div class="img-box">
+
+![WechatIMG91](../WechatIMG91.png)
+
+![WechatIMG92](../WechatIMG92.png)
+
+![WechatIMG93](../WechatIMG93.png)
+
+</div>
+
+<style>
+.img-box {
+    display: flex;
+}
+</style>
+
