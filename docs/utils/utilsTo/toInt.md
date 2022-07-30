@@ -1,6 +1,6 @@
-# `isUrlVal` 验证合法Uri
+# `toInt` 强转int型
 
-`支持版本：V0.0.2`
+`支持版本：V0.0.3`
 
 
 ## 参数说明 {#parameter}
@@ -12,16 +12,16 @@
 
 ## 返回内容 {#return}
 
-| 类型      | 说明                  |
-|---------|---------------------|
-| Boolean | 返回 `true` 或 `false` |
+| 类型  | 说明     |
+|-----|--------|
+| -   | 返回相关数据 |
 
 
 ## code示例 {#code}
 
 ```javascript
-import { isValidate } from "vue-utils-plus"
-const { isUrlVal } = isValidate()
+import { utilsTo } from "vue-utils-plus"
+const { toInt } = utilsTo()
 
-console.log(isUrlVal('网址'))
+console.log(toInt('123')) // 123
 ```

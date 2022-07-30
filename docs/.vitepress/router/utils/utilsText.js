@@ -4,8 +4,16 @@ export default {
     activeMatch: '/utils/utilsText/',
     items: [
         {
-            text: '值是否为某个类型',
-            link: '/utils/utilsText/is.md'
+            text: '金额处理',
+            link: '/utils/utilsText/priceFormat.md'
+        },
+        {
+            text: '数字格式化',
+            link: '/utils/utilsText/numberFormat.md'
+        },
+        {
+            text: '复制文本',
+            link: '/utils/utilsText/copyText.md'
         },
     ]
 }

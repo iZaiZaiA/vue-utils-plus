@@ -1,7 +1,33 @@
 /**
  * 日期时间处理
+ *
+ * 更多方法：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
  */
 export const utilsDate = () => {
+
+    //取当前时间
+    const getDateTime = () => {
+        const dateObj = new Date();
+        let YY = dateObj.getFullYear()  //年
+        let MM = dateObj.getMonth() + 1 //月
+        let DD = dateObj.getDate()      //日
+        let H = dateObj.getHours()      //时
+        let M = dateObj.getMinutes()    //分
+        let S = dateObj.getSeconds()    //秒
+        //处理格式
+        MM = MM.padStart(2, '0')
+        DD = DD.padStart(2, '0')
+        H = H.padStart(2, '0')
+        M = M.padStart(2, '0')
+        S = S.padStart(2, '0')
+        //返回数据
+        return {
+            dateTime: `${YY}-${MM}-${DD} ${H}:${M}:${S}`,   //日期时间
+            date: `${YY}-${MM}-${DD}`, //日期
+            time: `${H}:${M}:${S}`, //时间
+            obj: {YY,MM, DD, H, M, S}   //单独
+        }
+    }
 
     //计算时间
     const calcDate = (date1, date2) => {
@@ -44,9 +70,9 @@ export const utilsDate = () => {
 
     //当前时间戳
     const dateNow = () => {
-        return dateFormat(new Date(), "yyyyMMddhhmmss");
+        return Date.now();
     }
 
     //导出
-    return {calcDate,dateFormat,dateNow}
+    return {getDateTime,calcDate,dateFormat,dateNow}
 }

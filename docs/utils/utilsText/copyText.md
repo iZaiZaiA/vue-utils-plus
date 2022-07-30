@@ -1,27 +1,20 @@
-# `isUrlVal` 验证合法Uri
+# `copyText` 复制文本
 
 `支持版本：V0.0.2`
 
 
 ## 参数说明 {#parameter}
 
-| 参数  | 类型  | 可选值 | 默认值 | 说明  |
-|-----|-----|-----|-----|-----|
-| val | -   | -   | -   | 内容  |
-
-
-## 返回内容 {#return}
-
-| 类型      | 说明                  |
-|---------|---------------------|
-| Boolean | 返回 `true` 或 `false` |
+| 参数   | 类型  | 可选值 | 默认值 | 说明  |
+|------|-----|-----|-----|-----|
+| text | -   | -   | -   | 内容  |
 
 
 ## code示例 {#code}
 
 ```javascript
-import { isValidate } from "vue-utils-plus"
-const { isUrlVal } = isValidate()
+import { utilsText } from "vue-utils-plus"
+const { copyText } = utilsText()
 
-console.log(isUrlVal('网址'))
+copyText('内容')
 ```

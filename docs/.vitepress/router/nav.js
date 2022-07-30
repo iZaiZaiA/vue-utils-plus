@@ -28,12 +28,12 @@ export default [
                 link: '/utils/isValidate/isUrlVal.md'
             },
             {
-                text: '日期时间',
-                link: '/utils/utilsDate/calcDate.md'
+                text: '数组操作',
+                link: '/utils/utilsArray/isItem.md'
             },
             {
-                text: '深浅拷贝',
-                link: '/utils/utilsDeep/deepClone.md'
+                text: '对象处理',
+                link: '/utils/utilsObject/deepClone.md'
             },
             {
                 text: '文件处理',
@@ -41,7 +41,7 @@ export default [
             },
             {
                 text: '随机字符',
-                link: '/utils/utilsRandom/randomLenNum.md'
+                link: '/utils/utilsRandom/UUID.md'
             },
             {
                 text: '本地缓存',
@@ -49,12 +49,16 @@ export default [
             },
             {
                 text: '文本操作',
-                link: '/utils/utilsText/copyText.md'
+                link: '/utils/utilsText/priceFormat.md'
             },
             {
                 text: '数据转换',
                 link: '/utils/utilsTo/toInt.md'
-            }
+            },
+            {
+                text: '日期时间',
+                link: '/utils/utilsDate/getDateTime.md'
+            },
         ]
     },
     {

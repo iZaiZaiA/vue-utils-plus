@@ -1,6 +1,6 @@
-# `isUrlVal` 验证合法Uri
+# `toSplit` 根据逗号分隔
 
-`支持版本：V0.0.2`
+`支持版本：V0.0.3`
 
 
 ## 参数说明 {#parameter}
@@ -12,16 +12,16 @@
 
 ## 返回内容 {#return}
 
-| 类型      | 说明                  |
-|---------|---------------------|
-| Boolean | 返回 `true` 或 `false` |
+| 类型  | 说明     |
+|-----|--------|
+| -   | 返回相关数据 |
 
 
 ## code示例 {#code}
 
 ```javascript
-import { isValidate } from "vue-utils-plus"
-const { isUrlVal } = isValidate()
+import { utilsTo } from "vue-utils-plus"
+const { toSplit } = utilsTo()
 
-console.log(isUrlVal('网址'))
+console.log(toSplit('1,2,3,4')) // [1,2,3,4]
 ```

@@ -7,12 +7,10 @@ const {isValueNull} = isType()
 export const utilsTo = () => {
 
     //强转int型
-    const toInt = (val, defaultValue) => {
-        if (isValueNull(val)) {
-            return defaultValue === undefined ? -1 : defaultValue;
-        }
+    const toInt = (val) => {
+        if (isValueNull(val)) return -1;
         const num = parseInt(val, 0);
-        return Number.isNaN(num) ? (defaultValue === undefined ? -1 : defaultValue) : num;
+        return Number.isNaN(num) ? -1 : num;
     }
 
     //Json强转为Form类型
@@ -24,19 +22,14 @@ export const utilsTo = () => {
         return data;
     }
 
-    //date类转为字符串格式
-    const dateToFormat = (date, format = 'YYYY-MM-DD HH:mm:ss') => {
-        return date ? date.format(format) : null;
-    }
-
     //根据逗号联合
     const toJoin = (arr) => {
-        return arr ? arr.join(',') : '';
+        return arr ? arr.join() : '';
     }
 
     //根据逗号分隔
-    const toSplit = (str) => {
-        return str ? String(str).split(',') : '';
+    const toSplit = (val) => {
+        return val ? String(val).split(',') : '';
     }
 
     //表单序列化
@@ -94,5 +87,5 @@ export const utilsTo = () => {
     }
 
     //导出
-    return {toInt,toFormData,dateToFormat,toJoin,toSplit,toSerialize,toColor,toLighten}
+    return {toInt,toFormData,toJoin,toSplit,toSerialize,toColor,toLighten}
 }

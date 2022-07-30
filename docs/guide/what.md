@@ -26,21 +26,3 @@
 
 那些现成的库，非常好，但并不影响，我要自己做一个，我自己的常用方法函数库。
 
-### 道歉 三连
-
-<div class="img-box">
-
-![WechatIMG91](../WechatIMG91.png)
-
-![WechatIMG92](../WechatIMG92.png)
-
-![WechatIMG93](../WechatIMG93.png)
-
-</div>
-
-<style>
-.img-box {
-    display: flex;
-}
-</style>
-

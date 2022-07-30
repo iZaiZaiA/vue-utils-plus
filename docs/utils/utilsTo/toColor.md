@@ -1,27 +1,29 @@
-# `isUrlVal` 验证合法Uri
+# `toColor` 颜色混合
 
-`支持版本：V0.0.2`
+`支持版本：V0.0.3`
 
 
 ## 参数说明 {#parameter}
 
-| 参数  | 类型  | 可选值 | 默认值 | 说明  |
-|-----|-----|-----|-----|-----|
-| val | -   | -   | -   | 内容  |
+| 参数    | 类型  | 可选值 | 默认值 | 说明            |
+|-------|-----|-----|-----|---------------|
+| c1    | -   | -   | -   | 底色颜色值         |
+| c2    | -   | -   | -   | 主颜色值          |
+| ratio | -   | -   | -   | 混合度，0.1 - 0.9 |
 
 
 ## 返回内容 {#return}
 
-| 类型      | 说明                  |
-|---------|---------------------|
-| Boolean | 返回 `true` 或 `false` |
+| 类型  | 说明        |
+|-----|-----------|
+| -   | 返回混合后的颜色值 |
 
 
 ## code示例 {#code}
 
 ```javascript
-import { isValidate } from "vue-utils-plus"
-const { isUrlVal } = isValidate()
+import { utilsTo } from "vue-utils-plus"
+const { toColor } = utilsTo()
 
-console.log(isUrlVal('网址'))
+console.log(toColor('#FFFFFF', '#FE0000', 0.5))
 ```

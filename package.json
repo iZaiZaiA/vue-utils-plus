@@ -1,6 +1,6 @@
 {
     "name": "vue-utils-plus",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description": "vue-utils-plus",
     "scripts": {
         "build": "vite build",
@@ -16,11 +16,6 @@
     "devDependencies": {
         "@vitejs/plugin-vue": "^3.0.1",
         "@vue/compiler-sfc": "^3.2.37",
-        "axios": "^0.27.2",
-        "crypto-js": "^4.1.1",
-        "js-base64": "^3.7.2",
-        "js-cookie": "^3.0.1",
-        "js-md5": "^0.7.3",
         "vue": "^3.2.37",
         "sass": "^1.54.0",
         "vite": "^3.0.3"

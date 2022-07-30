@@ -1,6 +1,6 @@
 # `deepClone` 对象深拷贝
 
-`支持版本：V0.0.2`
+`支持版本：V0.0.3`
 
 
 ## 参数说明 {#parameter}
@@ -20,8 +20,8 @@
 ## code示例 {#code}
 
 ```javascript
-import { utilsDeep } from "vue-utils-plus"
-const { deepClone } = utilsDeep()
+import { utilsObject } from "vue-utils-plus"
+const { deepClone } = utilsObject()
 
 let obj = {id: 11, name: 22}
 

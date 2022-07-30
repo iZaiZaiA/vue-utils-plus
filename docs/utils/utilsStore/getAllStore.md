@@ -1,27 +1,20 @@
-# `isUrlVal` 验证合法Uri
+# `getAllStore` 获取全部localStorage
 
-`支持版本：V0.0.2`
-
-
-## 参数说明 {#parameter}
-
-| 参数  | 类型  | 可选值 | 默认值 | 说明  |
-|-----|-----|-----|-----|-----|
-| val | -   | -   | -   | 内容  |
+`支持版本：V0.0.3`
 
 
 ## 返回内容 {#return}
 
-| 类型      | 说明                  |
-|---------|---------------------|
-| Boolean | 返回 `true` 或 `false` |
+| 类型  | 说明       |
+|-----|----------|
+| -   | 返回 相关的数据 |
 
 
 ## code示例 {#code}
 
 ```javascript
-import { isValidate } from "vue-utils-plus"
-const { isUrlVal } = isValidate()
+import { utilsStore } from "vue-utils-plus"
+const { getAllStore } = utilsStore('key的前缀')
 
-console.log(isUrlVal('网址'))
+console.log(getAllStore())
 ```

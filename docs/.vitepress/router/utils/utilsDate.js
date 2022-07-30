@@ -4,6 +4,10 @@ export default {
     activeMatch: '/utils/utilsDate/',
     items: [
         {
+            text: '取当前时间',
+            link: '/utils/utilsDate/getDateTime.md'
+        },
+        {
             text: '计算时间',
             link: '/utils/utilsDate/calcDate.md'
         },
