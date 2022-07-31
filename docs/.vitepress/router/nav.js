@@ -37,7 +37,7 @@ export default [
             },
             {
                 text: '文件处理',
-                link: '/utils/utilsFile/downloadBlob.md'
+                link: '/utils/utilsFile/isSize.md'
             },
             {
                 text: '随机字符',

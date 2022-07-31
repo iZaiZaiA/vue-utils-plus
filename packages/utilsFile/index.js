@@ -3,6 +3,12 @@
  */
 export const utilsFile = () => {
 
+    //文件大小
+    const isSize = (fileSize, size) => {
+        let maxSize = size * 1024 * 1024
+        return fileSize <= maxSize;
+    }
+
     //下载文件
     const downloadBlob = (data, disposition, type) => {
         //type是文件类，详情可以参阅blob文件类型
@@ -29,5 +35,5 @@ export const utilsFile = () => {
     }
 
     //导出
-    return {downloadBlob}
+    return {isSize,downloadBlob}
 }
