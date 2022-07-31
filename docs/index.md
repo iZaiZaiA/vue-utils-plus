@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /guide/getting-started
+      link: /guide/started
     - theme: alt
       text: GitHub
       link: https://github.com/iZaiZaiA/vue-utils-plus
