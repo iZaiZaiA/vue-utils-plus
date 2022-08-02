@@ -15,5 +15,9 @@ export default {
             text: '复制文本',
             link: '/utils/utilsText/copyText.md'
         },
+        {
+            text: '系统内置记录',
+            link: '/utils/utilsText/article.md'
+        },
     ]
 }

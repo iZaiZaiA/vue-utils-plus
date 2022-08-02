@@ -4,6 +4,10 @@ export default {
     activeMatch: '/utils/utilsArray/',
     items: [
         {
+            text: '创建数组',
+            link: '/utils/utilsArray/arrFill.md'
+        },
+        {
             text: '是否存在',
             link: '/utils/utilsArray/isItem.md'
         },
@@ -58,6 +62,10 @@ export default {
         {
             text: '数组随机打乱',
             link: '/utils/utilsArray/arrShuffle.md'
+        },
+        {
+            text: '系统内置记录',
+            link: '/utils/utilsArray/article.md'
         },
     ]
 }

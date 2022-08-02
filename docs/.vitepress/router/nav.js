@@ -29,7 +29,7 @@ export default [
             },
             {
                 text: '数组操作',
-                link: '/utils/utilsArray/isItem.md'
+                link: '/utils/utilsArray/arrFill.md'
             },
             {
                 text: '对象处理',

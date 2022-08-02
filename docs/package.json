@@ -1,6 +1,6 @@
 {
     "name": "vue-utils-plus-docs",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "vue-utils-plus",
     "scripts": {
         "docs:dev": "vitepress dev --port 3030",

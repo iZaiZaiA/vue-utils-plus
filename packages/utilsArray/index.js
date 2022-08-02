@@ -115,6 +115,14 @@ export const utilsArray = () => {
         return arr.sort(() => Math.random() - 0.5)
     }
 
+    //创建初始数组
+    const arrFill = (len= 1,val = '') => {
+        return new Array(len).fill(val)
+    }
+
     //导出
-    return {isItem,del,delOther,delLeft,delRight,replaceItem,getIndex,delKey,delKeyOther,delKeyLeft,delKeyRight,intersection,getUnion,hasOneOf,arrShuffle};
+    return {
+        isItem,del,delOther,delLeft,delRight,replaceItem,getIndex,delKey,delKeyOther,delKeyLeft,delKeyRight,intersection,getUnion,hasOneOf,arrShuffle,
+        arrFill,
+    };
 }
