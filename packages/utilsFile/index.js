@@ -9,6 +9,17 @@ export const utilsFile = () => {
         return fileSize <= maxSize;
     }
 
+    //base64转成文件
+    const base64ToFile = (base64, type = "image/jpeg", fileName, suffix = ".jpg") => {
+        let array = [], binary = atob(base64.split(",")[1]);
+        for (let i = 0; i < binary.length; i++) {
+            array.push(binary.charCodeAt(i));
+        }
+        const fileBlob = new Blob([new Uint8Array(array)], {type: type});
+        const newFileName = fileName ? fileName : new Date()
+        return new File([fileBlob], newFileName + suffix);
+    }
+
     //下载文件
     const downloadBlob = (data, disposition, type) => {
         //type是文件类，详情可以参阅blob文件类型
