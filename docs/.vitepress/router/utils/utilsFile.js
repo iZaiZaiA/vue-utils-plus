@@ -8,6 +8,10 @@ export default {
             link: '/utils/utilsFile/isSize.md'
         },
         {
+            text: 'base64转成文件',
+            link: '/utils/utilsFile/base64ToFile.md'
+        },
+        {
             text: '下载文件',
             link: '/utils/utilsFile/downloadBlob.md'
         },
