@@ -1,6 +1,6 @@
 {
     "name": "vue-utils-plus",
-    "version": "0.0.5-beta.1",
+    "version": "0.0.5-beta.2",
     "description": "vue-utils-plus",
     "scripts": {
         "build": "vite build",

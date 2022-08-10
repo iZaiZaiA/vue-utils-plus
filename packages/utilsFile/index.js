@@ -46,5 +46,5 @@ export const utilsFile = () => {
     }
 
     //导出
-    return {isSize,downloadBlob}
+    return {isSize,base64ToFile,downloadBlob}
 }
