@@ -11,7 +11,7 @@ export default defineConfig({
         outDir: resolve(__dirname, './dist'),
         lib: {
             entry: resolve(__dirname, 'packages/index.js'),
-            name: 'vueUtils'
+            name: 'vueUtilsPlus'
         },
         rollupOptions: {
             context: 'globalThis',

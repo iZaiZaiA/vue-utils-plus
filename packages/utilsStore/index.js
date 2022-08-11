@@ -16,7 +16,7 @@ export const utilsStore = (prefix) => {
 
     //保存缓存
     const setStoreData = (key,value) => {
-        return setStore({name: name, content: value})
+        return setStore({name: key, content: value})
     }
 
     //删除缓存

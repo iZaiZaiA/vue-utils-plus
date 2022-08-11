@@ -79,5 +79,21 @@ export default {
             text: '是否为图片节点',
             link: '/utils/isType/isImageDom.md'
         },
+        {
+            text: '是否为对象',
+            link: '/utils/isType/isObject.md'
+        },
+        {
+            text: '取数组数据',
+            link: '/utils/isType/getArrValue.md'
+        },
+        {
+            text: '取对象数据',
+            link: '/utils/isType/getObjValue.md'
+        },
+        {
+            text: '取对象数据2',
+            link: '/utils/isType/getObjNullValue.md'
+        },
     ]
 }
