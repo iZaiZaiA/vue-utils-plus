@@ -12,6 +12,10 @@ export default {
             link: '/utils/utilsArray/isItem.md'
         },
         {
+            text: '二维数组中是否存在',
+            link: '/utils/utilsArray/isIndex.md'
+        },
+        {
             text: '移除指定元素',
             link: '/utils/utilsArray/del.md'
         },
@@ -66,6 +70,14 @@ export default {
         {
             text: '系统内置记录',
             link: '/utils/utilsArray/article.md'
+        },
+        {
+            text: '数组转对象',
+            link: '/utils/utilsArray/ArrToOneObj.md'
+        },
+        {
+            text: '取转换后的对象值',
+            link: '/utils/utilsArray/getOneObjValue.md'
         },
     ]
 }

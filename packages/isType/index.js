@@ -129,10 +129,26 @@ export const isType = () => {
         return map[toString.call(obj)];
     }
 
+    //取数据
+    const getArrValue = (val) => {
+        return isArray(val) ? val : [];
+    }
+
+    //取数据
+    const getObjValue = (val) => {
+        return isObject(val) ? val : {};
+    }
+
+    //取数据
+    const getObjNullValue = (val) => {
+        const res = getObjValue(val);
+        return isObjNull(res) ? false : res;
+    }
+
     //导出
     return {
         is,isFunction,isObjNull,isDef,isUnDef,isObject,isDate,isNumber,isAsyncFunction,
         isPromise,isString,isBoolean,isArray,isClient,isWindow,isElement,isImageDom,isNull,
-        isNullAndUnDef,isNullOrUnDef,isNullAll,isValueNull,getObjType
+        isNullAndUnDef,isNullOrUnDef,isNullAll,isValueNull,getObjType, getArrValue, getObjNullValue,
     }
 }

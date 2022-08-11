@@ -10,6 +10,11 @@ export const utilsArray = () => {
         return arr.indexOf(item) !== -1;
     }
 
+    //二维数组中是否存在
+    const isIndex = (arr, keyName, key) => {
+        return getIndex(arr, keyName, key) !== -1
+    }
+
     //移除数组中指定元素
     const del = (arr, item) => {
         let index = arr.indexOf(item);
@@ -120,9 +125,33 @@ export const utilsArray = () => {
         return new Array(len).fill(val)
     }
 
+    //数组转对象
+    const ArrToOneObj = async (arr, keyName, objName = {}, arrName = [], children = 'children') => {
+        if (arr && arr.length > 0) {
+            for (const item of arr) {
+                objName[item[keyName]] = {}
+                arrName.push(item[keyName])
+                for (const key of Object.keys(item)) {
+                    if (key !== children) {
+                        objName[item[keyName]][key] = item[key]
+                    }
+                    if (key === children && item[children] && item[children].length > 0) {
+                        await ArrToOneObj(item[children], keyName, objName, arrName, children)
+                    }
+                }
+            }
+        }
+    }
+
+    //取转换后的对象值
+    const getOneObjValue = (objName = {}, keyName, keyName2) => {
+        return keyName2 ? objName[keyName][keyName2] ?? '' : objName[keyName] ?? false
+    }
+
+
     //导出
     return {
         isItem,del,delOther,delLeft,delRight,replaceItem,getIndex,delKey,delKeyOther,delKeyLeft,delKeyRight,intersection,getUnion,hasOneOf,arrShuffle,
-        arrFill,
+        arrFill, ArrToOneObj, getOneObjValue, isIndex,
     };
 }
