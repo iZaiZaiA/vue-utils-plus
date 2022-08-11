@@ -8,6 +8,7 @@ https://vup.izaizaia.com/
 
 https://vue-utils-plus-docs.vercel.app/
 
+---
 
 简单说说，怎么用这个东西
 
@@ -16,11 +17,11 @@ https://vue-utils-plus-docs.vercel.app/
 在项目根目录，打开终端，复制粘贴，回车，一气呵成。
 
 ```sh
-yarn add vue-utils-plus -D
+yarn add vue-utils-plus
 
 # or
 
-npm i vue-utils-plus -D save
+npm i vue-utils-plus save
 ```
 
 ## 第二步: 引用
