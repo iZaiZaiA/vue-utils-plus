@@ -149,6 +149,7 @@ export const isType = () => {
     return {
         is,isFunction,isObjNull,isDef,isUnDef,isObject,isDate,isNumber,isAsyncFunction,
         isPromise,isString,isBoolean,isArray,isClient,isWindow,isElement,isImageDom,isNull,
-        isNullAndUnDef,isNullOrUnDef,isNullAll,isValueNull,getObjType, getArrValue, getObjNullValue,
+        isNullAndUnDef,isNullOrUnDef,isNullAll,isValueNull,getObjType,
+        getArrValue, getObjValue, getObjNullValue,
     }
 }

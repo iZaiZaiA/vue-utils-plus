@@ -39,6 +39,7 @@ const isType = () => {
     isValueNull: p,
     getObjType: b,
     getArrValue: j,
+    getObjValue: D,
     getObjNullValue: (t) => {
       const $ = D(t);
       return o($) ? !1 : $;
