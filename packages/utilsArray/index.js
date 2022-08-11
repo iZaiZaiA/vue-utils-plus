@@ -1,3 +1,6 @@
+import {isType} from '../isType/index';
+const {getObjValue,getObjNullValue} = isType()
+
 /**
  * 数组操作
  *
@@ -145,9 +148,13 @@ export const utilsArray = () => {
 
     //取转换后的对象值
     const getOneObjValue = (objName = {}, keyName, keyName2) => {
-        return keyName2 ? objName[keyName][keyName2] ?? '' : objName[keyName] ?? false
+        if (keyName2) {
+            const objValue = getObjValue(objName[keyName])
+            return objValue[keyName2] || ''
+        } else {
+            return getObjNullValue(objName[keyName])
+        }
     }
-
 
     //导出
     return {
