@@ -6,7 +6,7 @@ https://vup.izaizai.cn/
 
 https://vup.izaizaia.com/
 
-https://vue-utils-plus-docs.vercel.app/
+https://vue-utils-plus.vercel.app
 
 ---
 
