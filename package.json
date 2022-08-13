@@ -1,6 +1,6 @@
 {
     "name": "vue-utils-plus",
-    "version": "0.0.63",
+    "version": "1.0.0",
     "description": "vue-utils-plus",
     "scripts": {
         "build": "vite build",
@@ -16,8 +16,8 @@
     "devDependencies": {
         "@vitejs/plugin-vue": "^3.0.1",
         "@vue/compiler-sfc": "^3.2.37",
-        "vue": "^3.2.37",
-        "vite": "^3.0.3"
+        "vite": "^3.0.3",
+        "vue": "^3.2.37"
     },
     "license": "MIT",
     "author": "iZaiZaiA<https://github.com/iZaiZaiA>",

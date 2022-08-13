@@ -1,0 +1,48 @@
+.navbar {
+    backdrop-filter: saturate(50%) blur(8px);
+    background: rgba(255,255,255,.7);
+    border-bottom: initial;
+}
+.dark .navbar {
+    background: rgba(34, 39, 46, .7);
+}
+.home {
+    .hero {
+        margin-bottom: 3rem;
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--c-brand);
+        }
+        .description {
+            font-size: 1.4rem;
+        }
+        .action-button {
+            padding: 0.2rem 1rem;
+            border-radius: 10px;
+        }
+    }
+    .features {
+        border-top: initial;
+        margin: -8px;
+    }
+    .feature {
+        flex-grow: 1;
+        flex-basis: 20%;
+        max-width: initial;
+        padding: 12px;
+        margin: 8px;
+        height: 100%;
+        border-radius: 14px;
+        background-color: #f9f9f9;
+        h2 {
+            font-size: 1.1rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+    }
+    .footer {
+        margin-top: 4rem;
+    }
+}

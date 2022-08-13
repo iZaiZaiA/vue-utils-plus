@@ -121,5 +121,18 @@ export const isValidate = () => {
         return list;
     }
 
-    return {isUrlVal, isEmail, isMobile, isPhone, isLowerCase, isUpperCase, isAlphabets, isIdCard, isName, isNum, isNumord, isValidateNull, isPhoneVal}
+    //表单验证
+    const formValidate = async (formRef) => {
+        return new Promise( (resolve) => {
+            formRef.validate((valid) => {
+                resolve(!!valid)
+            })
+        });
+    }
+
+    return {
+        isUrlVal, isEmail, isMobile, isPhone, isLowerCase,
+        isUpperCase, isAlphabets, isIdCard, isName, isNum,
+        isNumord, isValidateNull, isPhoneVal, formValidate
+    }
 }
