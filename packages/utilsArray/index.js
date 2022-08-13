@@ -158,7 +158,8 @@ export const utilsArray = () => {
 
     //导出
     return {
-        isItem,del,delOther,delLeft,delRight,replaceItem,getIndex,delKey,delKeyOther,delKeyLeft,delKeyRight,intersection,getUnion,hasOneOf,arrShuffle,
+        isItem,del,delOther,delLeft,delRight,replaceItem,getIndex,delKey,
+        delKeyOther,delKeyLeft,delKeyRight,intersection,getUnion,hasOneOf,arrShuffle,
         arrFill, ArrToOneObj, getOneObjValue, isIndex,
     };
 }
