@@ -281,7 +281,7 @@ isUpperCase('BBBBAAA')
 ```
 
 
-## 验证合法Uri
+## 验证合法Url
 
 `isUrlVal()` `支持版本：V0.0.2`
 
