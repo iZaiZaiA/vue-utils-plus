@@ -1,4 +1,4 @@
 import { utilsTo } from "./index"
-const { toInt,toFormData,toJoin,toSplit,toSerialize,toColor,toLighten } = utilsTo()
+const { toInt,toFormData,toJoin,toSplit,toSerialize,toColor,toLighten,toParse } = utilsTo()
 
-export { toInt,toFormData,toJoin,toSplit,toSerialize,toColor,toLighten }
+export { toInt,toFormData,toJoin,toSplit,toSerialize,toColor,toLighten,toParse }

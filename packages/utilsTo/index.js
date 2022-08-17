@@ -86,6 +86,15 @@ export const utilsTo = () => {
         )}${addLight(color.substring(4, 6), amount)}`;
     }
 
+    //字符串转数组或JSON
+    const toParse = (val) => {
+        try {
+            return JSON.parse(val)
+        } catch (e) {
+            return false;
+        }
+    }
+
     //导出
-    return {toInt,toFormData,toJoin,toSplit,toSerialize,toColor,toLighten}
+    return {toInt, toFormData, toJoin, toSplit, toSerialize, toColor, toLighten, toParse}
 }

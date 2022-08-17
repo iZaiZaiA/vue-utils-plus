@@ -45,6 +45,24 @@ export const utilsText = () => {
         createInput.style.display = 'none';
     }
 
+    //输入框插入内容
+    const inputPosInsert = ({pos, input, val}) => {
+        const startPos = pos.start, endPos = pos.end
+        if (!input) return val; //输入框无内容时，直接覆盖
+        if (input.length === startPos) {
+            //光标在最后时，直接追加
+            return input + val
+        } else {
+            //光标在其它位置时，裁取文本，并拼接
+            return input.substring(0, startPos) + val + input.substring(endPos, input.length)
+        }
+    }
+
+    //设置光标位置
+    const setPosRange = (id, pos) => {
+        document.getElementById(id)?.setSelectionRange(pos,pos)
+    }
+
     //导出
-    return {priceFormat,numberFormat,copyText}
+    return {priceFormat,numberFormat,copyText,inputPosInsert,setPosRange}
 }

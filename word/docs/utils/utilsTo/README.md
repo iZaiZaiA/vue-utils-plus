@@ -162,3 +162,30 @@ const { toColor } = utilsTo()
 
 toColor('#FFFFFF', '#FE0000', 0.5)
 ```
+
+
+## 字符串转数组或JSON
+
+`toParse()` `支持版本：V0.0.71`
+
+### 参数说明
+
+| 参数  | 类型  | 可选值 | 默认值 | 说明     |
+|-----|-----|-----|-----|--------|
+| val | -   | -   | -   | 待转换的内容 |
+
+### 返回内容
+
+| 类型  | 说明                        |
+|-----|---------------------------|
+| -   | 如果能转换，就返回转换后的数据，否则返回false |
+
+### code示例
+
+```javascript
+const { toParse } = utilsTo()
+
+const val = "[abx1-2, abcsd-35]"
+
+toParse(val) //false
+```
