@@ -34,27 +34,25 @@ export const utilsText = () => {
         }
     }
 
-    //复制文本
-    const copyText = (text) => {
-        let createInput = document.createElement('textarea');
-        createInput.value = text;
-        document.body.appendChild(createInput);
-        createInput.select();
-        document.execCommand('Copy');
-        createInput.className = 'createInput';
-        createInput.style.display = 'none';
+    //设置复制文本
+    const setCopyText = async (text) => {
+        return await navigator.clipboard.writeText(text);
+    }
+
+    //取剪切板文本
+    const getCopyText = async () => {
+        return await navigator.clipboard.readText();
     }
 
     //输入框插入内容
-    const inputPosInsert = ({pos, input, val}) => {
-        const startPos = pos.start, endPos = pos.end
-        if (!input) return val; //输入框无内容时，直接覆盖
-        if (input.length === startPos) {
+    const setPosInsert = (startPos, endPos, value, value2) => {
+        if (!value) return value2; //输入框无内容时，直接覆盖
+        if (value.length === startPos) {
             //光标在最后时，直接追加
-            return input + val
+            return value + value2
         } else {
             //光标在其它位置时，裁取文本，并拼接
-            return input.substring(0, startPos) + val + input.substring(endPos, input.length)
+            return value.substring(0, startPos) + value2 + value.substring(endPos, value.length)
         }
     }
 
@@ -64,5 +62,5 @@ export const utilsText = () => {
     }
 
     //导出
-    return {priceFormat,numberFormat,copyText,inputPosInsert,setPosRange}
+    return {priceFormat,numberFormat,setCopyText,getCopyText,setPosInsert,setPosRange}
 }

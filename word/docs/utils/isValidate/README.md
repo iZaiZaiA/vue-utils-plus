@@ -356,7 +356,7 @@ const formRef = ref(null)
 
 const onSubmit = async () => {
     //注意，此方法是异步的。
-   const res = await formValidate(formRef.value)
+    const res = await formValidate(formRef.value)
     console.log(res) // true or false
 }
 ```

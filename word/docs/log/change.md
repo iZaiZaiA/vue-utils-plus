@@ -1,3 +1,12 @@
+## <small>V1.0.1 (2022-08-17)</small>
+
+* 修改 文本操作 的 `copyText` （拷贝复制文本） 方法 为 `setCopyText` （拷贝文本到剪切板），原 `execCommand` 方式的拷贝被浏览器逐步废弃，所以更换了新的`writeText`方式
+* 新增 文本操作 的 `getCopyText` （取剪切板文本） 方法
+* 新增 文本操作 的 `setPosInsert` （输入框插入内容） 方法，在输入框的光标位置插入内容
+* 新增 文本操作 的 `setPosRange` （设置光标位置） 方法
+* 新增 数据转换 的 `toParse` （字符串转数组或JSON） 方法
+
+
 ## <small>V1.0.0 (2022-08-13)</small>
 
 * 新增 内容验证 的 `formValidate` （饿了么UI表单验证） 方法

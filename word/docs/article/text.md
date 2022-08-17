@@ -98,3 +98,27 @@ str.replaceAll('b', '_') // 'aa__cc'
 const str = 'hello';
 str.at(1) // "e"
 ```
+
+## 取输入框的光标所在位置
+
+```javascript
+const specialDom = document.getElementById('输入框ID')
+const startPos = specialDom?.selectionStart || 0
+const endPos = specialDom?.selectionEnd || 0
+```
+
+vue方式
+
+```html
+<template>
+    <el-input @blur="specialInputBlur"/>
+</template>
+
+<script setup>
+    //失去焦点事件，当然也可以用鼠标右键事件等获取
+    const specialInputBlur = (e) => {
+        const startPos = e?.target?.selectionStart || 0
+        const endPos = e?.target?.selectionEnd || 0
+    }
+</script>
+```

@@ -1,4 +1,4 @@
 import { utilsText } from "./index"
-const { priceFormat,numberFormat,copyText,inputPosInsert,setPosRange } = utilsText()
+const { priceFormat,numberFormat,setCopyText,getCopyText,setPosInsert,setPosRange } = utilsText()
 
-export { priceFormat,numberFormat,copyText,inputPosInsert,setPosRange }
+export { priceFormat,numberFormat,setCopyText,getCopyText,setPosInsert,setPosRange }

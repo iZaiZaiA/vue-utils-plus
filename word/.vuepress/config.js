@@ -1,7 +1,7 @@
 const { defaultTheme } = require('vuepress')
 const { searchPlugin } = require('@vuepress/plugin-search')
 
-const version = '1.0.0'
+const version = '1.0.1'
 
 module.exports = {
     lang: 'zh-CN',
