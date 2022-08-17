@@ -114,7 +114,7 @@ priceFormat(12.3456, 2)
 
 `setPosInsert()` `支持版本：V1.0.1`
 
-在输入框的光标位置插入内容，取光标位置，参考文章 [取输入框的光标所在位置](https://vup.izaizai.cn/docs/article/text.html#%E5%8F%96%E8%BE%93%E5%85%A5%E6%A1%86%E7%9A%84%E5%85%89%E6%A0%87%E6%89%80%E5%9C%A8%E4%BD%8D%E7%BD%AE)
+在输入框的光标位置插入内容，取光标位置，参考文章 [取输入框的光标所在位置](/docs/article/text.html#%E5%8F%96%E8%BE%93%E5%85%A5%E6%A1%86%E7%9A%84%E5%85%89%E6%A0%87%E6%89%80%E5%9C%A8%E4%BD%8D%E7%BD%AE)
 
 ### 参数说明
 
@@ -137,7 +137,7 @@ priceFormat(12.3456, 2)
 ```javascript
 const { setPosInsert } = utilsText()
 
-priceFormat(0, 0, '123','插入') // 插入123
+setPosInsert(0, 0, '123','插入') // 插入123
 ```
 
 ## 设置光标位置

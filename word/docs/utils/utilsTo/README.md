@@ -188,6 +188,5 @@ toColor('#FFFFFF', '#FE0000', 0.5)
 const { toParse } = utilsTo()
 
 const val = "[abx1-2, abcsd-35]"
-
-toParse(val) //false
+const res = toParse(val) || []
 ```
