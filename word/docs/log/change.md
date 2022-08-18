@@ -1,3 +1,8 @@
+## <small>V1.0.2 (2022-08-18)</small>
+
+* 新增 数据转换 的 `setRowSpace` （处理栅栏间隔） 方法
+
+
 ## <small>V1.0.1 (2022-08-17)</small>
 
 * 修改 文本操作 的 `copyText` （拷贝复制文本） 方法 为 `setCopyText` （拷贝文本到剪切板），原 `execCommand` 方式的拷贝被浏览器逐步废弃，所以更换了新的`writeText`方式

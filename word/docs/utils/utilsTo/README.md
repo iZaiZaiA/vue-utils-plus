@@ -190,3 +190,30 @@ const { toParse } = utilsTo()
 const val = "[abx1-2, abcsd-35]"
 const res = toParse(val) || []
 ```
+
+
+## 处理栅栏间隔
+
+`setRowSpace()` `支持版本：V1.0.2`
+
+### 参数说明
+
+| 参数      | 类型     | 可选值                | 默认值      | 说明   |
+|---------|--------|--------------------|----------|------|
+| spacing | Number | -                  | -        | 间隔值  |
+| type    | String | `margin` `padding` | `margin` | 间距类型 |
+
+### 返回内容
+
+| 类型  | 说明      |
+|-----|---------|
+| -   | style样式 |
+
+### code示例
+
+```javascript
+const { setRowSpace } = utilsTo()
+
+setRowSpace(20, 'margin')   // margin: -10px
+setRowSpace(20, 'padding')  // padding: 10px
+```

@@ -8,7 +8,7 @@ export const utilsTo = () => {
 
     //强转int型
     const toInt = (val) => {
-        if (isValueNull(val)) return -1;
+        if (isValueNull(val)) return 0;
         const num = parseInt(val, 0);
         return Number.isNaN(num) ? -1 : num;
     }
@@ -86,7 +86,11 @@ export const utilsTo = () => {
         )}${addLight(color.substring(4, 6), amount)}`;
     }
 
-    //字符串转数组或JSON
+    /**
+     * 字符串转数组或JSON
+     * @param val   字符串
+     * @returns {boolean|any}
+     */
     const toParse = (val) => {
         try {
             return JSON.parse(val)
@@ -95,6 +99,23 @@ export const utilsTo = () => {
         }
     }
 
+    /**
+     * 处理栅格间隔
+     * @param spacing   间隔
+     * @param type      margin or padding
+     * @returns {string}
+     */
+    const setRowSpace = (spacing, type = 'margin') => {
+        const val = toInt(spacing);
+        const int = type === 'margin' ? -2 : 2;
+        if (val !== 0) {
+            const floor = Math.floor(val / int) + (val % 2) + 'px';
+            return `${type}:${floor}`;
+        } else {
+            return '';
+        }
+    }
+
     //导出
-    return {toInt, toFormData, toJoin, toSplit, toSerialize, toColor, toLighten, toParse}
+    return {toInt, toFormData, toJoin, toSplit, toSerialize, toColor, toLighten, toParse, setRowSpace}
 }

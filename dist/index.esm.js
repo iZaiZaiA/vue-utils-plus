@@ -1,5 +1,5 @@
 const isType = () => {
-  const f = Object.prototype.toString, g = (e, I) => f.call(e) === `[object ${I}]`, h = (e) => g(e, "Function"), l = (e) => JSON.stringify(e) == "{}", s = (e) => typeof e < "u", i = (e) => !s(e), o = (e) => e !== null && g(e, "Object"), a = (e) => g(e, "Date"), c = (e) => g(e, "Number"), n = (e) => g(e, "AsyncFunction"), d = (e) => g(e, "Promise") && o(e) && h(e.then) && h(e.catch), m = (e) => g(e, "String"), A = (e) => g(e, "Boolean"), y = (e) => e && Array.isArray(e), r = () => typeof window < "u", N = (e) => typeof window < "u" && g(e, "Window"), O = (e) => o(e) && !!e.tagName, w = (e) => e && ["IMAGE", "IMG", "image", "img"].includes(e.tagName), D = (e) => e === null, t = (e) => i(e) && D(e), u = (e) => i(e) || D(e), b = (e) => typeof e === void 0 || e === null || e === "", p = (e) => (e != null ? e : "") === "", S = (e) => {
+  const m = Object.prototype.toString, g = (e, I) => m.call(e) === `[object ${I}]`, S = (e) => g(e, "Function"), l = (e) => JSON.stringify(e) == "{}", s = (e) => typeof e < "u", i = (e) => !s(e), o = (e) => e !== null && g(e, "Object"), a = (e) => g(e, "Date"), c = (e) => g(e, "Number"), w = (e) => g(e, "AsyncFunction"), n = (e) => g(e, "Promise") && o(e) && S(e.then) && S(e.catch), d = (e) => g(e, "String"), p = (e) => g(e, "Boolean"), h = (e) => e && Array.isArray(e), r = () => typeof window < "u", N = (e) => typeof window < "u" && g(e, "Window"), O = (e) => o(e) && !!e.tagName, j = (e) => e && ["IMAGE", "IMG", "image", "img"].includes(e.tagName), D = (e) => e === null, t = (e) => i(e) && D(e), u = (e) => i(e) || D(e), f = (e) => typeof e === void 0 || e === null || e === "", b = (e) => (e != null ? e : "") === "", y = (e) => {
     let I = Object.prototype.toString, V = {
       "[object Boolean]": "boolean",
       "[object Number]": "number",
@@ -13,32 +13,32 @@ const isType = () => {
       "[object Object]": "object"
     };
     return e instanceof Element ? "element" : V[I.call(e)];
-  }, j = (e) => y(e) ? e : [], x = (e) => o(e) ? e : {};
+  }, A = (e) => h(e) ? e : [], x = (e) => o(e) ? e : {};
   return {
     is: g,
-    isFunction: h,
+    isFunction: S,
     isObjNull: l,
     isDef: s,
     isUnDef: i,
     isObject: o,
     isDate: a,
     isNumber: c,
-    isAsyncFunction: n,
-    isPromise: d,
-    isString: m,
-    isBoolean: A,
-    isArray: y,
+    isAsyncFunction: w,
+    isPromise: n,
+    isString: d,
+    isBoolean: p,
+    isArray: h,
     isClient: r,
     isWindow: N,
     isElement: O,
-    isImageDom: w,
+    isImageDom: j,
     isNull: D,
     isNullAndUnDef: t,
     isNullOrUnDef: u,
-    isNullAll: b,
-    isValueNull: p,
-    getObjType: S,
-    getArrValue: j,
+    isNullAll: f,
+    isValueNull: b,
+    getObjType: y,
+    getArrValue: A,
     getObjValue: x,
     getObjNullValue: (e) => {
       const I = x(e);
@@ -6514,15 +6514,15 @@ const isType = () => {
   81e4,
   82e4,
   83e4
-], verifyBirthDate = (f) => {
-  const g = `${f.slice(0, 4)}-${f.slice(4, 6)}-${f.slice(6)}`, h = new Date(g).getTime();
-  return !(Number.isNaN(h) || h > new Date().getTime());
-}, verifyCardNum = (f = "") => {
-  const g = f.toString().trim();
+], verifyBirthDate = (m) => {
+  const g = `${m.slice(0, 4)}-${m.slice(4, 6)}-${m.slice(6)}`, S = new Date(g).getTime();
+  return !(Number.isNaN(S) || S > new Date().getTime());
+}, verifyCardNum = (m = "") => {
+  const g = m.toString().trim();
   if (g.length !== 18 || !/^[1-9]\d{5}(18|19|[2-9]\d)\d{9}[0-9Xx]$/.test(g))
     return !1;
-  const h = Number(g.slice(0, 6));
-  if (areaSet.indexOf(h) === -1)
+  const S = Number(g.slice(0, 6));
+  if (areaSet.indexOf(S) === -1)
     return !1;
   const l = g.slice(6, 14);
   return !!verifyBirthDate(l);
@@ -6568,8 +6568,8 @@ const isType = () => {
     return !1;
   },
   isPhoneVal: (r) => {
-    let N = [], O = !0, w = "", D = /^0\d{2,3}-?\d{7,8}$/;
-    return globalThis.isNull(r) ? w = "\u624B\u673A\u53F7\u7801\u4E0D\u80FD\u4E3A\u7A7A" : r.length === 11 ? D.test(r) ? w = "\u624B\u673A\u53F7\u7801\u683C\u5F0F\u4E0D\u6B63\u786E" : O = !1 : w = "\u624B\u673A\u53F7\u7801\u957F\u5EA6\u4E0D\u4E3A11\u4F4D", N.push(O), N.push(w), N;
+    let N = [], O = !0, j = "", D = /^0\d{2,3}-?\d{7,8}$/;
+    return globalThis.isNull(r) ? j = "\u624B\u673A\u53F7\u7801\u4E0D\u80FD\u4E3A\u7A7A" : r.length === 11 ? D.test(r) ? j = "\u624B\u673A\u53F7\u7801\u683C\u5F0F\u4E0D\u6B63\u786E" : O = !1 : j = "\u624B\u673A\u53F7\u7801\u957F\u5EA6\u4E0D\u4E3A11\u4F4D", N.push(O), N.push(j), N;
   },
   formValidate: async (r) => new Promise((N) => {
     r.validate((O) => {
@@ -6592,74 +6592,74 @@ const isType = () => {
   isPhoneVal,
   formValidate
 } = isValidate(), { getObjValue, getObjNullValue } = isType(), utilsArray = () => {
-  const f = (t, u) => t.indexOf(u) !== -1, g = (t, u, b) => a(t, u, b) !== -1, h = (t, u) => {
-    let b = t.indexOf(u), p = [...t];
-    return p.splice(b, 1), [...p];
+  const m = (t, u) => t.indexOf(u) !== -1, g = (t, u, f) => a(t, u, f) !== -1, S = (t, u) => {
+    let f = t.indexOf(u), b = [...t];
+    return b.splice(f, 1), [...b];
   }, l = (t, u) => {
-    let b = t.indexOf(u), p = [...t];
-    for (let S = 0; S < t.length; S++)
-      b !== S && p.splice(S, 1);
-    return [...p];
+    let f = t.indexOf(u), b = [...t];
+    for (let y = 0; y < t.length; y++)
+      f !== y && b.splice(y, 1);
+    return [...b];
   }, s = (t, u) => {
-    let b = t.indexOf(u), p = [...t];
-    for (let S = 0; S < t.length; S++) {
-      if (b >= S)
+    let f = t.indexOf(u), b = [...t];
+    for (let y = 0; y < t.length; y++) {
+      if (f >= y)
         return;
-      p.splice(S, 1);
+      b.splice(y, 1);
     }
-    return [...p];
+    return [...b];
   }, i = (t, u) => {
-    let b = t.indexOf(u), p = [...t];
-    for (let S = 0; S < t.length; S++)
-      b > S && p.splice(S, 1);
-    return [...p];
-  }, o = (t, u, b) => {
-    let p = t.indexOf(u), S = t.indexOf(b), j = [...t];
-    return j.splice(p, 1), j.splice(S, 0, u), [...j];
-  }, a = (t, u, b) => t.findIndex((p) => p[u] == b), c = (t, u, b) => {
-    const p = a(t, u, b);
-    return h(t, t[p]);
-  }, n = (t, u, b) => {
-    const p = a(t, u, b);
-    return l(t, t[p]);
-  }, d = (t, u, b) => {
-    const p = a(t, u, b);
-    return s(t, t[p]);
-  }, m = (t, u, b) => {
-    const p = a(t, u, b);
-    return i(t, t[p]);
-  }, A = (t, u) => {
-    let b = Math.min(t.length, u.length), p = -1, S = [];
-    for (; ++p < b; )
-      t.indexOf(u[p]) > -1 && S.push(u[p]);
-    return S;
-  }, y = (t, u) => Array.from(/* @__PURE__ */ new Set([...t, ...u])), r = (t, u) => t.some((b) => u.indexOf(b) > -1), N = (t) => t.sort(() => Math.random() - 0.5), O = (t = 1, u = "") => new Array(t).fill(u), w = async (t, u, b = {}, p = [], S = "children") => {
+    let f = t.indexOf(u), b = [...t];
+    for (let y = 0; y < t.length; y++)
+      f > y && b.splice(y, 1);
+    return [...b];
+  }, o = (t, u, f) => {
+    let b = t.indexOf(u), y = t.indexOf(f), A = [...t];
+    return A.splice(b, 1), A.splice(y, 0, u), [...A];
+  }, a = (t, u, f) => t.findIndex((b) => b[u] == f), c = (t, u, f) => {
+    const b = a(t, u, f);
+    return S(t, t[b]);
+  }, w = (t, u, f) => {
+    const b = a(t, u, f);
+    return l(t, t[b]);
+  }, n = (t, u, f) => {
+    const b = a(t, u, f);
+    return s(t, t[b]);
+  }, d = (t, u, f) => {
+    const b = a(t, u, f);
+    return i(t, t[b]);
+  }, p = (t, u) => {
+    let f = Math.min(t.length, u.length), b = -1, y = [];
+    for (; ++b < f; )
+      t.indexOf(u[b]) > -1 && y.push(u[b]);
+    return y;
+  }, h = (t, u) => Array.from(/* @__PURE__ */ new Set([...t, ...u])), r = (t, u) => t.some((f) => u.indexOf(f) > -1), N = (t) => t.sort(() => Math.random() - 0.5), O = (t = 1, u = "") => new Array(t).fill(u), j = async (t, u, f = {}, b = [], y = "children") => {
     if (t && t.length > 0)
-      for (const j of t) {
-        b[j[u]] = {}, p.push(j[u]);
-        for (const x of Object.keys(j))
-          x !== S && (b[j[u]][x] = j[x]), x === S && j[S] && j[S].length > 0 && await w(j[S], u, b, p, S);
+      for (const A of t) {
+        f[A[u]] = {}, b.push(A[u]);
+        for (const x of Object.keys(A))
+          x !== y && (f[A[u]][x] = A[x]), x === y && A[y] && A[y].length > 0 && await j(A[y], u, f, b, y);
       }
   };
   return {
-    isItem: f,
-    del: h,
+    isItem: m,
+    del: S,
     delOther: l,
     delLeft: s,
     delRight: i,
     replaceItem: o,
     getIndex: a,
     delKey: c,
-    delKeyOther: n,
-    delKeyLeft: d,
-    delKeyRight: m,
-    intersection: A,
-    getUnion: y,
+    delKeyOther: w,
+    delKeyLeft: n,
+    delKeyRight: d,
+    intersection: p,
+    getUnion: h,
     hasOneOf: r,
     arrShuffle: N,
     arrFill: O,
-    ArrToOneObj: w,
-    getOneObjValue: (t = {}, u, b) => b ? getObjValue(t[u])[b] || "" : getObjNullValue(t[u]),
+    ArrToOneObj: j,
+    getOneObjValue: (t = {}, u, f) => f ? getObjValue(t[u])[f] || "" : getObjNullValue(t[u]),
     isIndex: g
   };
 }, {
@@ -6684,16 +6684,16 @@ const isType = () => {
   isIndex
 } = utilsArray(), utilsDate = () => ({ getDateTime: () => {
   const s = new Date();
-  let i = s.getFullYear(), o = s.getMonth() + 1, a = s.getDate(), c = s.getHours(), n = s.getMinutes(), d = s.getSeconds();
-  return o = o.padStart(2, "0"), a = a.padStart(2, "0"), c = c.padStart(2, "0"), n = n.padStart(2, "0"), d = d.padStart(2, "0"), {
-    dateTime: `${i}-${o}-${a} ${c}:${n}:${d}`,
+  let i = s.getFullYear(), o = s.getMonth() + 1, a = s.getDate(), c = s.getHours(), w = s.getMinutes(), n = s.getSeconds();
+  return o = o.padStart(2, "0"), a = a.padStart(2, "0"), c = c.padStart(2, "0"), w = w.padStart(2, "0"), n = n.padStart(2, "0"), {
+    dateTime: `${i}-${o}-${a} ${c}:${w}:${n}`,
     date: `${i}-${o}-${a}`,
-    time: `${c}:${n}:${d}`,
-    obj: { YY: i, MM: o, DD: a, H: c, M: n, S: d }
+    time: `${c}:${w}:${n}`,
+    obj: { YY: i, MM: o, DD: a, H: c, M: w, S: n }
   };
 }, calcDate: (s, i) => {
-  let o = i - s, a = Math.floor(o / (24 * 3600 * 1e3)), c = o % (24 * 3600 * 1e3), n = Math.floor(c / (3600 * 1e3)), d = c % (3600 * 1e3), m = Math.floor(d / (60 * 1e3)), A = d % (60 * 1e3), y = Math.round(o / 1e3);
-  return { leave1: c, leave2: d, leave3: A, days: a, hours: n, minutes: m, seconds: y };
+  let o = i - s, a = Math.floor(o / (24 * 3600 * 1e3)), c = o % (24 * 3600 * 1e3), w = Math.floor(c / (3600 * 1e3)), n = c % (3600 * 1e3), d = Math.floor(n / (60 * 1e3)), p = n % (60 * 1e3), h = Math.round(o / 1e3);
+  return { leave1: c, leave2: n, leave3: p, days: a, hours: w, minutes: d, seconds: h };
 }, dateFormat: (s, i) => {
   if (i = i || "yyyy-MM-dd hh:mm:ss", s !== "Invalid Date") {
     let o = {
@@ -6712,12 +6712,12 @@ const isType = () => {
   }
   return "";
 }, dateNow: () => Date.now() }), { getDateTime, calcDate, dateFormat, dateNow } = utilsDate(), { isValidateNull } = isValidate(), utilsStore = (prefix) => {
-  const prefixKey = prefix ? prefix + "-" : "", getStoreData = (f) => getStore({ name: f }), setStoreData = (f, g) => setStore({ name: f, content: g }), delStoreData = (f) => removeStore({ name: f }), setStore = (f = {}) => {
-    let { name: g, content: h, type: l } = f;
+  const prefixKey = prefix ? prefix + "-" : "", getStoreData = (m) => getStore({ name: m }), setStoreData = (m, g) => setStore({ name: m, content: g }), delStoreData = (m) => removeStore({ name: m }), setStore = (m = {}) => {
+    let { name: g, content: S, type: l } = m;
     g = prefixKey + g;
     let s = {
-      dataType: typeof h,
-      content: h,
+      dataType: typeof S,
+      content: S,
       type: l,
       datetime: new Date().getTime()
     };
@@ -6734,12 +6734,12 @@ const isType = () => {
       }
       return debug ? obj : (obj.dataType === "string" ? content = obj.content : obj.dataType === "number" ? content = Number(obj.content) : obj.dataType === "boolean" ? content = eval(obj.content) : obj.dataType === "object" && (content = obj.content), content != null ? content : "");
     }
-  }, removeStore = (f = {}) => {
-    let { name: g, type: h } = f;
-    g = prefixKey + g, h ? window.sessionStorage.removeItem(g) : window.localStorage.removeItem(g);
-  }, getAllStore = (f = {}) => {
-    let g = [], { type: h } = f;
-    if (h)
+  }, removeStore = (m = {}) => {
+    let { name: g, type: S } = m;
+    g = prefixKey + g, S ? window.sessionStorage.removeItem(g) : window.localStorage.removeItem(g);
+  }, getAllStore = (m = {}) => {
+    let g = [], { type: S } = m;
+    if (S)
       for (let l = 0; l <= window.sessionStorage.length; l++)
         g.push({
           name: window.sessionStorage.key(l),
@@ -6757,10 +6757,10 @@ const isType = () => {
           })
         });
     return g;
-  }, clearStore = (f = {}) => {
-    let { type: g } = f;
+  }, clearStore = (m = {}) => {
+    let { type: g } = m;
     g ? window.sessionStorage.clear() : window.localStorage.clear();
-  }, clearStoreAll = (f = {}) => {
+  }, clearStoreAll = (m = {}) => {
     window.sessionStorage.clear(), window.localStorage.clear();
   };
   return { getStoreData, setStoreData, delStoreData, setStore, getStore, removeStore, getAllStore, clearStore, clearStoreAll };
@@ -6775,30 +6775,30 @@ const isType = () => {
   clearStore,
   clearStoreAll
 } = utilsStore(), { isValueNull } = isType(), utilsTo = () => {
-  const f = (n) => {
+  const m = (n) => {
     if (isValueNull(n))
-      return -1;
+      return 0;
     const d = parseInt(n, 0);
     return Number.isNaN(d) ? -1 : d;
   }, g = (n) => {
     const d = new FormData();
-    return Object.keys(n).forEach((m) => {
-      d.append(m, Array.isArray(n[m]) ? n[m].join(",") : n[m]);
+    return Object.keys(n).forEach((p) => {
+      d.append(p, Array.isArray(n[p]) ? n[p].join(",") : n[p]);
     }), d;
-  }, h = (n) => n ? n.join() : "", l = (n) => n ? String(n).split(",") : "", s = (n) => {
+  }, S = (n) => n ? n.join() : "", l = (n) => n ? String(n).split(",") : "", s = (n) => {
     let d = [];
-    return Object.keys(n).forEach((m) => {
-      d.push(`${m}=${n[m]}`);
+    return Object.keys(n).forEach((p) => {
+      d.push(`${p}=${n[p]}`);
     }), d.join("&");
-  }, i = (n, d, m) => {
-    m = Math.max(Math.min(Number(m), 1), 0);
-    let A = parseInt(n.substring(1, 3), 16), y = parseInt(n.substring(3, 5), 16), r = parseInt(n.substring(5, 7), 16), N = parseInt(d.substring(1, 3), 16), O = parseInt(d.substring(3, 5), 16), w = parseInt(d.substring(5, 7), 16), D = Math.round(A * (1 - m) + N * m), t = Math.round(y * (1 - m) + O * m), u = Math.round(r * (1 - m) + w * m);
-    return D = ("0" + (D || 0).toString(16)).slice(-2), t = ("0" + (t || 0).toString(16)).slice(-2), u = ("0" + (u || 0).toString(16)).slice(-2), "#" + D + t + u;
+  }, i = (n, d, p) => {
+    p = Math.max(Math.min(Number(p), 1), 0);
+    let h = parseInt(n.substring(1, 3), 16), r = parseInt(n.substring(3, 5), 16), N = parseInt(n.substring(5, 7), 16), O = parseInt(d.substring(1, 3), 16), j = parseInt(d.substring(3, 5), 16), D = parseInt(d.substring(5, 7), 16), t = Math.round(h * (1 - p) + O * p), u = Math.round(r * (1 - p) + j * p), f = Math.round(N * (1 - p) + D * p);
+    return t = ("0" + (t || 0).toString(16)).slice(-2), u = ("0" + (u || 0).toString(16)).slice(-2), f = ("0" + (f || 0).toString(16)).slice(-2), "#" + t + u + f;
   }, o = (n, d) => {
-    const m = parseInt(n, 16) + d, A = m > 255 ? 255 : m;
-    return A.toString(16).length > 1 ? A.toString(16) : `0${A.toString(16)}`;
+    const p = parseInt(n, 16) + d, h = p > 255 ? 255 : p;
+    return h.toString(16).length > 1 ? h.toString(16) : `0${h.toString(16)}`;
   };
-  return { toInt: f, toFormData: g, toJoin: h, toSplit: l, toSerialize: s, toColor: i, toLighten: (n, d) => (n = n.indexOf("#") >= 0 ? n.substring(1, n.length) : n, d = Math.trunc(255 * d / 100), `#${o(n.substring(0, 2), d)}${o(
+  return { toInt: m, toFormData: g, toJoin: S, toSplit: l, toSerialize: s, toColor: i, toLighten: (n, d) => (n = n.indexOf("#") >= 0 ? n.substring(1, n.length) : n, d = Math.trunc(255 * d / 100), `#${o(n.substring(0, 2), d)}${o(
     n.substring(2, 4),
     d
   )}${o(n.substring(4, 6), d)}`), toParse: (n) => {
@@ -6807,25 +6807,32 @@ const isType = () => {
     } catch {
       return !1;
     }
+  }, setRowSpace: (n, d = "margin") => {
+    const p = m(n), h = d === "margin" ? -2 : 2;
+    if (p !== 0) {
+      const r = Math.floor(p / h) + p % 2 + "px";
+      return `${d}:${r}`;
+    } else
+      return "";
   } };
-}, { toInt, toFormData, toJoin, toSplit, toSerialize, toColor, toLighten, toParse } = utilsTo(), utilsRandom = () => {
-  const f = () => crypto.randomUUID(), g = () => Math.random().toString(36).slice(8), h = "0123456789", l = "abcdefghijklmnopqrstuvwxyz", s = "ABCDEFGHIJKLMNOPQRSTUVWXYZ", i = (y = 8, r) => {
-    r || (r = h + l + s);
+}, { toInt, toFormData, toJoin, toSplit, toSerialize, toColor, toLighten, toParse, setRowSpace } = utilsTo(), utilsRandom = () => {
+  const m = () => crypto.randomUUID(), g = () => Math.random().toString(36).slice(8), S = "0123456789", l = "abcdefghijklmnopqrstuvwxyz", s = "ABCDEFGHIJKLMNOPQRSTUVWXYZ", i = (h = 8, r) => {
+    r || (r = S + l + s);
     let N = r.length, O = "";
-    for (let w = 0; w < y; w++)
+    for (let j = 0; j < h; j++)
       O += r.charAt(Math.floor(Math.random() * N));
     return O;
   };
-  return { UUID: f, UniqueID: g, getRandom: i, getNumber: (y) => i(y, h), getLowerCase: (y) => i(y, l), getUpperCase: (y) => i(y, s), getNumberLower: (y) => i(y, h + l), getNumberUpper: (y) => i(y, h + s), getAlphabets: (y) => i(y, l + s), getRandomFrom: (y, r) => Math.floor(Math.random() * (y - r + 1) + r) };
+  return { UUID: m, UniqueID: g, getRandom: i, getNumber: (h) => i(h, S), getLowerCase: (h) => i(h, l), getUpperCase: (h) => i(h, s), getNumberLower: (h) => i(h, S + l), getNumberUpper: (h) => i(h, S + s), getAlphabets: (h) => i(h, l + s), getRandomFrom: (h, r) => Math.floor(Math.random() * (h - r + 1) + r) };
 }, { UUID, UniqueID, getRandom, getNumber, getLowerCase, getUpperCase, getNumberLower, getNumberUpper, getAlphabets, getRandomFrom } = utilsRandom(), utilsFile = () => ({ isSize: (l, s) => {
   let i = s * 1024 * 1024;
   return l <= i;
 }, base64ToFile: (l, s = "image/jpeg", i, o = "jpg") => {
   let a = [], c = atob(l.split(",")[1]);
-  for (let m = 0; m < c.length; m++)
-    a.push(c.charCodeAt(m));
-  const n = new Blob([new Uint8Array(a)], { type: s }), d = i || Date.now();
-  return new File([n], d + "." + o);
+  for (let d = 0; d < c.length; d++)
+    a.push(c.charCodeAt(d));
+  const w = new Blob([new Uint8Array(a)], { type: s }), n = i || Date.now();
+  return new File([w], n + "." + o);
 }, downloadBlob: (l, s, i) => {
   i = i || "application/vnd.ms-excel", s = s || "";
   let o = new Blob([l], { type: i });
@@ -6837,29 +6844,29 @@ const isType = () => {
     return parseFloat(c).toFixed(a).toString().split("").reverse().join("").replace(/(\d{3})/g, "$1,").replace(/\,$/, "").split("").reverse().join("");
   } else
     return 0;
-}, numberFormat: (o) => o > 1e3 && o < 1e4 ? Math.floor(o / 1e3) + "K" : o > 1e4 ? Math.floor(o / 1e4) + "W" : o, setCopyText: async (o) => await navigator.clipboard.writeText(o), getCopyText: async () => await navigator.clipboard.readText(), setPosInsert: (o, a, c, n) => c ? c.length === o ? c + n : c.substring(0, o) + n + c.substring(a, c.length) : n, setPosRange: (o, a) => {
+}, numberFormat: (o) => o > 1e3 && o < 1e4 ? Math.floor(o / 1e3) + "K" : o > 1e4 ? Math.floor(o / 1e4) + "W" : o, setCopyText: async (o) => await navigator.clipboard.writeText(o), getCopyText: async () => await navigator.clipboard.readText(), setPosInsert: (o, a, c, w) => c ? c.length === o ? c + w : c.substring(0, o) + w + c.substring(a, c.length) : w, setPosRange: (o, a) => {
   var c;
   (c = document.getElementById(o)) == null || c.setSelectionRange(a, a);
 } }), { priceFormat, numberFormat, setCopyText, getCopyText, setPosInsert, setPosRange } = utilsText(), utilsObject = () => {
-  const f = (l, s = /* @__PURE__ */ new Map()) => {
+  const m = (l, s = /* @__PURE__ */ new Map()) => {
     const i = (a) => typeof a == "object" && a !== null, o = (a, c) => {
-      let n = -1, d = a.length;
-      for (; ++n < d; )
-        c(a[n]);
+      let w = -1, n = a.length;
+      for (; ++w < n; )
+        c(a[w]);
     };
     if (i(l)) {
       const a = s.get(l);
       if (a)
         return a;
-      let c = Array.isArray(l) ? [] : {}, n = Object.keys(l);
-      return s.set(l, c), o(n, (d) => {
-        const m = l[d];
-        c[d] = i(m) ? f(m, s) : m;
+      let c = Array.isArray(l) ? [] : {}, w = Object.keys(l);
+      return s.set(l, c), o(w, (n) => {
+        const d = l[n];
+        c[n] = i(d) ? m(d, s) : d;
       }), c;
     } else
       return l;
   };
-  return { deepClone: f, hasKey: (l, s) => s ? s in l : Object.keys(l).length, objEqual: (l, s) => {
+  return { deepClone: m, hasKey: (l, s) => s ? s in l : Object.keys(l).length, objEqual: (l, s) => {
     const i = Object.keys(l), o = Object.keys(s);
     return i.length !== o.length ? !1 : i.length === 0 && o.length === 0 ? !0 : !i.some((a) => l[a] != s[a]);
   } };
@@ -6959,6 +6966,7 @@ export {
   setCopyText,
   setPosInsert,
   setPosRange,
+  setRowSpace,
   setStore,
   setStoreData,
   toColor,

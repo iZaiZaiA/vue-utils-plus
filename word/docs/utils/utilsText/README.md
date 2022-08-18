@@ -156,7 +156,7 @@ setPosInsert(0, 0, '123','插入') // 插入123
 ### code示例
 
 ```javascript
-const { setPosInsert } = utilsText()
+const { setPosRange } = utilsText()
 
 setPosRange('id', 0)
 ```
