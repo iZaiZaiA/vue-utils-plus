@@ -106,3 +106,24 @@ obj = Object.entries(obj)       //[ [ 'a', 6 ], [ 'b', 4 ], [ 'c', 3 ], [ 'd', 5
 obj.sort((a, b) => b[1] - a[1]) //[ [ 'g', 8 ], [ 'a', 6 ], [ 'd', 5 ], [ 'b', 4 ], [ 'c', 3 ] ]
 console.log(obj[0][1]);         //  8
 ```
+
+## 二维数组是否满足条件
+
+```javascript
+let rows = [{a: 1, b: 2}, {a: 3, b: 2}, {a: 3, b: 2}]
+const result = rows.every(({b})=> {
+    return b === 2
+})
+console.log(result) // true
+```
+
+
+## 二维数组拼接字段
+
+```javascript
+let rows = [{id: 1, b: 2}, {id: 2, b: 2}, {id: 3, b: 2}]
+const result = rows.map((obj) => {
+    return obj.id;
+}).join(",")
+console.log(result) // 1,2,3
+```
