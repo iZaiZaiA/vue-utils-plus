@@ -7,48 +7,61 @@ const {isValidateNull} = isValidate()
 export const utilsStore = (prefix) => {
 
     //缓存前缀
-    const prefixKey = prefix?prefix + '-': '';
+    const prefixKey = prefix ? prefix + '-' : '';
 
     //获取缓存
-    const getStoreData = (key) => {
-        return getStore({name: key})
+    const getStoreData = (key, debug = false, session = false) => {
+        return getStore({
+            name: key,
+            debug: debug,
+            session: session
+        })
     }
 
     //保存缓存
-    const setStoreData = (key,value) => {
-        return setStore({name: key, content: value})
+    const setStoreData = (key, value, session = false) => {
+        return setStore({
+            name: key,
+            content: value,
+            session: session
+        })
     }
 
     //删除缓存
-    const delStoreData = (key) => {
-        return removeStore({name: key})
+    const delStoreData = (key, session = false) => {
+        return removeStore({
+            name: key,
+            session: session
+        })
     }
 
     //存储localStorage
-    const setStore = (params = {}) => {
-        let {name, content, type} = params;
-        name = prefixKey + name
+    const setStore = ({name, content, session}) => {
+        let names = prefixKey + name
         let obj = {
             dataType: typeof (content),
-            content: content,
-            type: type,
+            content: content ?? '',
+            session: session ?? '',
             datetime: new Date().getTime()
         }
-        if (type) {
-            window.sessionStorage.setItem(name, JSON.stringify(obj));
+        if (session) {
+            window.sessionStorage.setItem(names, JSON.stringify(obj));
         } else {
-            window.localStorage.setItem(name, JSON.stringify(obj));
+            window.localStorage.setItem(names, JSON.stringify(obj));
         }
     }
 
     //获取localStorage
-    const getStore = (params = {}) => {
-        let {name, debug} = params;
-        name = prefixKey + name
-        let obj = {}, content;
-        obj = window.sessionStorage.getItem(name);
-        if (isValidateNull(obj)) obj = window.localStorage.getItem(name);
-        if (isValidateNull(obj)) return;
+    const getStore = ({name, debug, session}) => {
+        let obj, content, names = prefixKey + name;
+        if (session) {
+            obj = window.sessionStorage.getItem(names);
+        } else {
+            obj = window.localStorage.getItem(names);
+        }
+        if (isValidateNull(obj)) {
+            return;
+        }
         try {
             obj = JSON.parse(obj);
         } catch {
@@ -70,20 +83,19 @@ export const utilsStore = (prefix) => {
     }
 
     //删除localStorage
-    const removeStore = (params = {}) => {
-        let {name, type} = params;
-        name = prefixKey + name
-        if (type) {
-            window.sessionStorage.removeItem(name);
+    const removeStore = ({name, session}) => {
+        let names = prefixKey + name
+        if (session) {
+            window.sessionStorage.removeItem(names);
         } else {
-            window.localStorage.removeItem(name);
+            window.localStorage.removeItem(names);
         }
     }
 
     //获取全部localStorage
-    const getAllStore = (params = {}) => {
-        let list = [], {type} = params;
-        if (type) {
+    const getAllStore = ({session}) => {
+        let list = [];
+        if (session) {
             for (let i = 0; i <= window.sessionStorage.length; i++) {
                 list.push({
                     name: window.sessionStorage.key(i),
@@ -101,16 +113,14 @@ export const utilsStore = (prefix) => {
                         name: window.localStorage.key(i),
                     })
                 })
-
             }
         }
         return list;
     }
 
     //清空全部localStorage
-    const clearStore = (params = {}) => {
-        let {type} = params;
-        if (type) {
+    const clearStore = ({session}) => {
+        if (session) {
             window.sessionStorage.clear();
         } else {
             window.localStorage.clear()
@@ -118,7 +128,7 @@ export const utilsStore = (prefix) => {
     }
 
     //清空全部localStorage
-    const clearStoreAll = (params = {}) => {
+    const clearStoreAll = () => {
         window.sessionStorage.clear();
         window.localStorage.clear()
     }

@@ -15,11 +15,11 @@ export const utilsDate = () => {
         let M = dateObj.getMinutes()    //分
         let S = dateObj.getSeconds()    //秒
         //处理格式
-        MM = MM.padStart(2, '0')
-        DD = DD.padStart(2, '0')
-        H = H.padStart(2, '0')
-        M = M.padStart(2, '0')
-        S = S.padStart(2, '0')
+        MM = String(MM).padStart(2, '0')
+        DD = String(DD).padStart(2, '0')
+        H = String(H).padStart(2, '0')
+        M = String(M).padStart(2, '0')
+        S = String(S).padStart(2, '0')
         //返回数据
         return {
             dateTime: `${YY}-${MM}-${DD} ${H}:${M}:${S}`,   //日期时间
