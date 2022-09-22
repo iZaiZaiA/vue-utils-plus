@@ -1,5 +1,5 @@
-const { defaultTheme } = require('vuepress')
-const { searchPlugin } = require('@vuepress/plugin-search')
+import {defaultTheme} from "vuepress"
+import {searchPlugin} from "@vuepress/plugin-search"
 
 const version = '1.0.3'
 
