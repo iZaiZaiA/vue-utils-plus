@@ -28,7 +28,7 @@ export const utilsOther = () => {
         }
         let colorList = localStorage.getItem(`clog_color`);
         if (!colorList) {
-            colorList = ['#fbbd08', '#f37b1d', '#e54d42', '#e03997', '#b745cb', '#8044de', '#0081ff', '#37c0fe', '#6eb92b', '#8dc63f', '#8799a3', '#a5673f'];
+            colorList = ['#1ECC95', '#f37b1d', '#e54d42', '#e03997', '#b745cb', '#8044de', '#0081ff', '#37c0fe', '#6eb92b', '#8dc63f', '#8799a3', '#a5673f'];
         } else {
             colorList = colorList.split(`,`);
         }
