@@ -1,6 +1,6 @@
 {
     "name": "vue-utils-plus",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "vue-utils-plus",
     "scripts": {
         "build": "vite build",
@@ -14,10 +14,10 @@
     "main": "./dist/index.js",
     "module": "./dist/index.esm.js",
     "devDependencies": {
-        "@vitejs/plugin-vue": "^3.1.0",
-        "@vue/compiler-sfc": "^3.2.39",
-        "vite": "^3.1.3",
-        "vue": "^3.2.39"
+        "@vitejs/plugin-vue": "^3.1.2",
+        "@vue/compiler-sfc": "^3.2.41",
+        "vite": "^3.1.8",
+        "vue": "^3.2.41"
     },
     "license": "MIT",
     "author": "iZaiZaiA<https://github.com/iZaiZaiA>",

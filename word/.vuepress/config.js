@@ -1,7 +1,7 @@
 import {defaultTheme} from "vuepress"
 import {searchPlugin} from "@vuepress/plugin-search"
 
-const version = '1.0.3'
+const version = '1.0.4'
 
 module.exports = {
     lang: 'zh-CN',
@@ -56,6 +56,14 @@ module.exports = {
                     {
                         text: '日期时间',
                         link: '/docs/utils/utilsDate/README.md',
+                    },
+                    {
+                        text: '系统操作',
+                        link: '/docs/utils/utilsOs/README.md',
+                    },
+                    {
+                        text: '其它方法函数',
+                        link: '/docs/utils/utilsOther/README.md',
                     },
                 ],
             },

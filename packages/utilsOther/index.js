@@ -4,7 +4,7 @@
 export const utilsOther = () => {
 
     //控制台打印，来自 colorui 作者 - 文晓港
-    const clog = (name, tips, data, micro) => {
+    const clog = (name, tips, data, micro= '打印') => {
         const nameList = localStorage.getItem(`clog_name`);
         if (!nameList) {
             localStorage.setItem(`clog_name`, [name]);
