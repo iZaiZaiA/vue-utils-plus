@@ -376,6 +376,37 @@ getIndex(arr, 'id', 2) // 1
 ```
 
 
+## 取数组中的值
+
+`getArrKeyValue()` `支持版本：V1.0.5`
+
+### 参数说明
+
+| 参数       | 类型  | 可选值 | 默认值 | 说明   |
+|----------|-----|-----|-----|------|
+| arr      | -   | -   | -   | 数组数据 |
+| keyName  | -   | -   | -   | 字段名  |
+| keyName2 | -   | -   | -   | 字段名  |
+| value    | -   | -   | -   | 字段值  |
+
+### 返回内容
+
+| 参数名 | 说明                        |
+|-----|---------------------------|
+| -   | 获取到的数据，不存在则为 value 参数或 为空 |
+
+### code示例
+
+```javascript
+const { getArrKeyValue } = utilsArray()
+
+let arr = [{id: 1, name: '1111'},{id: 2, name: '222'}]
+
+getArrKeyValue(arr, 'id', 'name', 2) // '222'
+```
+
+
+
 ## 取转换后的对象值
 
 `getOneObjValue()` `支持版本：V0.0.6`

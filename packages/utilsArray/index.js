@@ -156,10 +156,20 @@ export const utilsArray = () => {
         }
     }
 
+    //取数组中的值
+    const getArrKeyValue = (arr, key, key2, value) => {
+        if (value > 0) {
+            const index = getIndex(arr, key, value)
+            return arr[index][key2] ?? value
+        } else {
+            return ''
+        }
+    }
+
     //导出
     return {
         isItem,del,delOther,delLeft,delRight,replaceItem,getIndex,delKey,
         delKeyOther,delKeyLeft,delKeyRight,intersection,getUnion,hasOneOf,arrShuffle,
-        arrFill, ArrToOneObj, getOneObjValue, isIndex,
+        arrFill, ArrToOneObj, getOneObjValue, isIndex, getArrKeyValue,
     };
 }

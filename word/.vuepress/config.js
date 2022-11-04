@@ -1,7 +1,7 @@
 import {defaultTheme} from "vuepress"
 import {searchPlugin} from "@vuepress/plugin-search"
 
-const version = '1.0.4'
+const version = '1.0.5'
 
 module.exports = {
     lang: 'zh-CN',
@@ -92,7 +92,11 @@ module.exports = {
                         link: 'https://github.com/iZaiZaiA/vue-utils-plus/issues/new',
                     }
                 ],
-            }
+            },
+            {
+                text: '小零食',
+                link: 'https://shop182729045.taobao.com/',
+            },
         ],
         sidebarDepth: 1,
         repo: 'https://github.com/iZaiZaiA/vue-utils-plus',

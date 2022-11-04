@@ -56,3 +56,16 @@ pnpm add vue-utils-plus
 
   </CodeGroupItem>
 </CodeGroup>
+
+
+
+## 定制服务
+
+
+```javascript
+//接定制开发服务，可定制: 微信小程序、手机APP、PC网页  纯前端 或 前后端全栈 都可。
+
+//公司合作或个人合作都可，公司合作，可签订相关合同。
+
+//联系微信: iZaiZaiAA  备注来意，否则不通过，望理解。
+```
