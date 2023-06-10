@@ -14,10 +14,10 @@
     "main": "./dist/index.js",
     "module": "./dist/index.esm.js",
     "devDependencies": {
-        "@vitejs/plugin-vue": "^3.1.2",
-        "@vue/compiler-sfc": "^3.2.41",
-        "vite": "^3.1.8",
-        "vue": "^3.2.41"
+        "@vitejs/plugin-vue": "^4.2.3",
+        "@vue/compiler-sfc": "^3.3.4",
+        "vite": "^4.3.9",
+        "vue": "^3.3.4"
     },
     "license": "MIT",
     "author": "iZaiZaiA<https://github.com/iZaiZaiA>",
